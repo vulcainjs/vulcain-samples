@@ -9,4 +9,9 @@ export class MyQueryHandler extends DefaultQueryHandler<Customer> {
         let list = await super.getAllAsync();
         return list.map(c => c.firstName + " " + c.lastName);
     }
+
+    // Or you can override default methods
+    async getAllAsync() {
+        return super.getAllAsync();
+    }
 }

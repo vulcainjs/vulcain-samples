@@ -6,6 +6,6 @@ export class Customer {
     firstName: string;
     @Property({ type: 'string', required: true })
     lastName: string;
-    // This property is private 
-    post: string;
+    @Property({ type: "uid" })
+    id: string;
 }
