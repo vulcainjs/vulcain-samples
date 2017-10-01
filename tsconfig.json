@@ -1,0 +1,11 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "target": "es6",
+        "sourceMap": true,
+        "outDir": "out",
+        "moduleResolution": "node",
+        "module": "commonjs"
+    }
+}
