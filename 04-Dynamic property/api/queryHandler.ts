@@ -1,10 +1,11 @@
-import { QueryHandler, Query, DefaultQueryHandler, ConfigurationProperty, System, DynamicConfiguration } from "vulcain-corejs";
-import { Customer } from "./model";
+import { QueryHandler, Query, IScopedComponent, ConfigurationProperty, System, DynamicConfiguration, IRequestContext } from "vulcain-corejs";
 
-@QueryHandler({ scope: '?', schema: "Customer" })
-export class MyQueryHandler extends DefaultQueryHandler<Customer> {
+@QueryHandler({ scope: '?' })
+export class MyValueHandler implements IScopedComponent {
+    context: IRequestContext;
+
     @ConfigurationProperty("myValue", "string")
-    private myValue = DynamicConfiguration.asProperty<string>("myValue", "?????");
+    private myValue = DynamicConfiguration.getProperty<string>("myValue", "?????");
 
     @Query({ description: "Get property value", action: "value"})
     async getValue() {
