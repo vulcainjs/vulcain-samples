@@ -1,20 +1,110 @@
 {
-        "version": "0.2.0",
-        "configurations": [
-            {
-                "type": "node",
-                "request": "launch",
-                "name": "Launch Program",
-                "program": "${workspaceRoot}/app.js"
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "01-minimal",
+            "program": "${workspaceRoot}/01-minimal/index.ts",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "02-Custom Handlers",
+            "program": "${workspaceRoot}/02-Custom Handlers/index.ts",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "03-Hystrix command",
+            "program": "${workspaceRoot}/03-Hystrix command/index.ts",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "04-Dynamic property",
+            "env": {
+                "myValue":"valeur 10" 
             },
-            {
-                "type": "node",
-                "request": "launch",
-                "name": "Launch Program",
-                "program": "${file}",
-                "outFiles": [
-                    "${workspaceRoot}/out/**/*.js"
-                ]
-            }
-        ]
-    }
+            "program": "${workspaceRoot}/04-Dynamic property/index.ts",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "05-Calling other services",
+            "program": "${workspaceRoot}/05-Calling other services/index.ts",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "06-Adding persistence",
+            "program": "${workspaceRoot}/06-Adding persistence/index.ts",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "07-Event propagation",
+            "program": "${workspaceRoot}/07-Event propagation/index.ts",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "08-Validating schema",
+            "program": "${workspaceRoot}/08-Validating schema/index.ts",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "09-Using mocks",
+            "program": "${workspaceRoot}/09-Using mocks/index.ts",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "10-Monitoring & Metrics",
+            "program": "${workspaceRoot}/10-Monitoring & Metrics/index.ts",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",            
+            "env": {
+                
+            },            
+            "name": "11-Authentication",
+            "program": "${workspaceRoot}/11-Authentication/index.ts",
+            "outFiles": [
+                "${workspaceRoot}/out/**/*.js"
+            ]
+        }
+    ]
+}
