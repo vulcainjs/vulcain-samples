@@ -1,9 +1,11 @@
 import { QueryHandler, Query, DefaultQueryHandler } from "vulcain-corejs";
 import { Customer } from "./model";
 
+// Extends default handler providing query functionalities (get and all)
 @QueryHandler({ scope: '?', schema: "Customer" })
 export class MyQueryHandler extends DefaultQueryHandler<Customer> {
     
+    // Add a new request
     @Query({ description: "Get customer fullnames"})
     async getFullCustomerNames() {
         let list = await super.getAllAsync();
