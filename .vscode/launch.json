@@ -5,27 +5,39 @@
             "type": "node",
             "request": "launch",
             "name": "01-minimal",
+            "env": {
+                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_VERSION": "1.0"
+            },            
             "program": "${workspaceRoot}/01-minimal/index.ts",
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/01-minimal/**/*.js"
             ]
         },
         {
             "type": "node",
             "request": "launch",
             "name": "02-Custom Handlers",
+            "env": {
+                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_VERSION": "1.0"
+            },            
             "program": "${workspaceRoot}/02-Custom Handlers/index.ts",
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/02-Custom Handlers/**/*.js"
             ]
         },
         {
             "type": "node",
             "request": "launch",
             "name": "03-Hystrix command",
+            "env": {
+                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_VERSION": "1.0"
+            },            
             "program": "${workspaceRoot}/03-Hystrix command/index.ts",
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/03-Hystrix command/**/*.js"
             ]
         },
         {
@@ -33,77 +45,104 @@
             "request": "launch",
             "name": "04-Dynamic property",
             "env": {
-                "myValue":"valeur 10" 
-            },
+                "vulcainServer": "localhost:9090",
+                    "VULCAIN_SERVICE_NAME": "SAMPLE",
+                    "VULCAIN_SERVICE_VERSION": "1.0"
+                },
             "program": "${workspaceRoot}/04-Dynamic property/index.ts",
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/04-Dynamic property/**/*.js"
             ]
         },
         {
             "type": "node",
             "request": "launch",
             "name": "05-Calling other services",
+            "env": {
+                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_VERSION": "1.0"
+            },            
             "program": "${workspaceRoot}/05-Calling other services/index.ts",
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/05-Calling other services/**/*.js"
             ]
         },
         {
             "type": "node",
             "request": "launch",
             "name": "06-Adding persistence",
+            "env": {
+                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_VERSION": "1.0"
+            },            
             "program": "${workspaceRoot}/06-Adding persistence/index.ts",
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/06-Adding persistence/**/*.js"
             ]
         },
         {
             "type": "node",
             "request": "launch",
             "name": "07-Event propagation",
+            "env": {
+                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_VERSION": "1.0"
+            },            
             "program": "${workspaceRoot}/07-Event propagation/index.ts",
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/07-Event propagation/**/*.js"
             ]
         },
         {
             "type": "node",
             "request": "launch",
             "name": "08-Validating schema",
+            "env": {
+                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_VERSION": "1.0"
+            },            
             "program": "${workspaceRoot}/08-Validating schema/index.ts",
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/08-Validating schema/**/*.js"
             ]
         },
         {
             "type": "node",
             "request": "launch",
             "name": "09-Using mocks",
+            "env": {
+                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_VERSION": "1.0"
+            },            
             "program": "${workspaceRoot}/09-Using mocks/index.ts",
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/09-Using mocks/**/*.js"
             ]
         },
         {
             "type": "node",
             "request": "launch",
             "name": "10-Monitoring & Metrics",
+            "env": {
+                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_VERSION": "1.0"
+            },            
             "program": "${workspaceRoot}/10-Monitoring & Metrics/index.ts",
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/10-Monitoring & Metrics/**/*.js"
             ]
         },
         {
             "type": "node",
-            "request": "launch",            
+            "request": "launch",
             "env": {
-                
-            },            
+                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_VERSION": "1.0"
+            },
             "name": "11-Authentication",
             "program": "${workspaceRoot}/11-Authentication/index.ts",
             "outFiles": [
-                "${workspaceRoot}/out/**/*.js"
+                "${workspaceRoot}/11-Authentication/**/*.js"
             ]
         }
     ]

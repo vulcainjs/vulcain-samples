@@ -6,6 +6,7 @@ export class GetRandomNameCommand extends AbstractHttpCommand {
 
     // Call an external api
     async runAsync(region: string): Promise<Customer> {
+        // Call an external api providing random user names
         let response = await this.getAsync("https://uinames.com/api?region=" + region);
         let data = response.body;
         return <Customer>{ firstName: data.name, lastName: data.surname, id: data.name + data.surname };
