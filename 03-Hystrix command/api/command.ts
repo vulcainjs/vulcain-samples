@@ -1,6 +1,7 @@
 import { Command, HttpDependency, AbstractHttpCommand } from "vulcain-corejs";
 import { Customer } from "./model";
 
+// Declare a hystrix command and override some command properties
 @Command({ executionTimeoutInMilliseconds: 2500 }) // Force a timeout
 export class GetRandomNameCommand extends AbstractHttpCommand {
 
@@ -15,6 +16,7 @@ export class GetRandomNameCommand extends AbstractHttpCommand {
     // Fallback method if error on runAsync
     // Guarantee that a value will be provided in case of error (or timeout)
     // Get the same parameters than runAsync
+    // This is an optional method
     fallbackAsync(region: string): Customer  {
         return <Customer>{ firstName: "Nobody", lastName: "", id: (Math.random() * 100).toString() };
     }
