@@ -1,3 +1,7 @@
-# vulcain-samples
+# Testing with mocks
 
-Samples &amp; quickstart for vulcainjs
+## Environment variables
+
+SaveMockSession = &gt;session pattern&lt;
+
+UseMockSession = &gt;session pattern&lt;
