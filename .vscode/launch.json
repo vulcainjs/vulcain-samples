@@ -10,6 +10,7 @@
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/01-minimal/index.ts",
+            "cwd":"${workspaceRoot}/01-minimal",
             "outFiles": [
                 "${workspaceRoot}/01-minimal/**/*.js"
             ]
@@ -23,6 +24,7 @@
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/02-Custom Handlers/index.ts",
+            "cwd":"${workspaceRoot}/02-Custom Handlers",
             "outFiles": [
                 "${workspaceRoot}/02-Custom Handlers/**/*.js"
             ]
@@ -36,6 +38,7 @@
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/03-Hystrix command/index.ts",
+            "cwd":"${workspaceRoot}\/03-Hystrix command",
             "outFiles": [
                 "${workspaceRoot}/03-Hystrix command/**/*.js"
             ]
@@ -50,6 +53,7 @@
                     "VULCAIN_SERVICE_VERSION": "1.0"
                 },
             "program": "${workspaceRoot}/04-Dynamic property/index.ts",
+            "cwd":"${workspaceRoot}/04-Dynamic property",
             "outFiles": [
                 "${workspaceRoot}/04-Dynamic property/**/*.js"
             ]
@@ -63,6 +67,7 @@
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/05-Calling other services/index.ts",
+            "cwd":"${workspaceRoot}/05-Calling other services",
             "outFiles": [
                 "${workspaceRoot}/05-Calling other services/**/*.js"
             ]
@@ -76,6 +81,7 @@
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/06-Adding persistence/index.ts",
+            "cwd":"${workspaceRoot}/06-Adding persistence",
             "outFiles": [
                 "${workspaceRoot}/06-Adding persistence/**/*.js"
             ]
@@ -89,6 +95,7 @@
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/07-Event propagation/index.ts",
+            "cwd":"${workspaceRoot}/07-Event propagation",
             "outFiles": [
                 "${workspaceRoot}/07-Event propagation/**/*.js"
             ]
@@ -102,6 +109,7 @@
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/08-Validating schema/index.ts",
+            "cwd":"${workspaceRoot}/08-Validating schema",
             "outFiles": [
                 "${workspaceRoot}/08-Validating schema/**/*.js"
             ]
@@ -115,6 +123,7 @@
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/09-Using mocks/index.ts",
+            "cwd":"${workspaceRoot}/09-Using mocks",
             "outFiles": [
                 "${workspaceRoot}/09-Using mocks/**/*.js"
             ]
@@ -128,6 +137,7 @@
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/10-Monitoring & Metrics/index.ts",
+            "cwd":"${workspaceRoot}/10-Monitoring & Metrics",
             "outFiles": [
                 "${workspaceRoot}/10-Monitoring & Metrics/**/*.js"
             ]
@@ -141,6 +151,7 @@
             },
             "name": "11-Authentication",
             "program": "${workspaceRoot}/11-Authentication/index.ts",
+            "cwd":"${workspaceRoot}/11-Authentication",
             "outFiles": [
                 "${workspaceRoot}/11-Authentication/**/*.js"
             ]
