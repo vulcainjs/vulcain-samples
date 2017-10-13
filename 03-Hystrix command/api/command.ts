@@ -1,4 +1,4 @@
-import { Command, HttpDependency, AbstractHttpCommand } from "vulcain-corejs";
+import { Command, HttpDependency, AbstractHttpCommand, ApplicationError } from "vulcain-corejs";
 import { Customer } from "./model";
 
 // Declare a hystrix command and override some command properties
@@ -7,6 +7,9 @@ export class GetRandomNameCommand extends AbstractHttpCommand {
 
     // Call an external api
     async runAsync(region: string): Promise<Customer> {
+        if (Math.random() > 0.8)
+            throw new ApplicationError("Simulate an error");
+        
         // Call an external api providing random user names
         let response = await this.getAsync("https://uinames.com/api?region=" + region);
         let data = response.body;

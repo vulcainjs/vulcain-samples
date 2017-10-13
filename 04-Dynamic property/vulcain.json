@@ -1,6 +1,6 @@
 {
     "mode": "local",
     "config": {
-        
+        "MyValue": "val1"
     }
 }

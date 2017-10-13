@@ -1,3 +1,3 @@
-# vulcain-samples
+# Type checking for input
 
-Samples &amp; quickstart for vulcainjs
+

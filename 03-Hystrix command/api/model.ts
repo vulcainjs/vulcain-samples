@@ -1,6 +1,7 @@
-import { Model, Property } from 'vulcain-corejs';
+import { Model, Property, QueryHandler } from 'vulcain-corejs';
 
 @Model()
+@QueryHandler({scope: '?'})       // Anonymous access
 export class Customer {
     @Property({ type: 'string', required: true })
     firstName: string;
