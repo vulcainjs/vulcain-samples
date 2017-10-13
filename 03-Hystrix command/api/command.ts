@@ -8,7 +8,7 @@ export class GetRandomNameCommand extends AbstractHttpCommand {
     // Call an external api
     async runAsync(region: string): Promise<Customer> {
         if (Math.random() > 0.8)
-            throw new ApplicationError("Simulate an error");
+            throw new ApplicationError("Simulate an error"); // run fallbackasync
         
         // Call an external api providing random user names
         let response = await this.getAsync("https://uinames.com/api?region=" + region);

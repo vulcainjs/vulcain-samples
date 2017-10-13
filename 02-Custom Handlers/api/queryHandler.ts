@@ -6,7 +6,7 @@ import { Customer } from "./model";
 export class MyQueryHandler extends DefaultQueryHandler<Customer> {
     
     // Add a new request
-    @Query({ description: "Get customer fullnames", action: "fullNames"})
+    @Query({ description: "Get customer fullnames", action: "fullNames", outputSchema: "string"})
     async getFullCustomerNames() {
         let list = await super.getAllAsync();
         return list.map(c => c.firstName + " " + c.lastName);

@@ -6,7 +6,7 @@
             "request": "launch",
             "name": "01-minimal",
             "env": {
-                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_NAME": "SampleService",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/01-minimal/index.ts",
@@ -20,7 +20,7 @@
             "request": "launch",
             "name": "02-Custom Handlers",
             "env": {
-                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_NAME": "SampleService",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/02-Custom Handlers/index.ts",
@@ -34,7 +34,7 @@
             "request": "launch",
             "name": "03-Hystrix command",
             "env": {
-                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_NAME": "SampleService",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/03-Hystrix command/index.ts",
@@ -49,7 +49,7 @@
             "name": "04-Dynamic property",
             "env": {
                 "vulcainServer": "localhost:9090",
-                    "VULCAIN_SERVICE_NAME": "SAMPLE",
+                    "VULCAIN_SERVICE_NAME": "SampleService",
                     "VULCAIN_SERVICE_VERSION": "1.0"
                 },
             "program": "${workspaceRoot}/04-Dynamic property/index.ts",
@@ -63,7 +63,7 @@
             "request": "launch",
             "name": "05-Calling other services",
             "env": {
-                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_NAME": "SampleService2",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/05-Calling other services/index.ts",
@@ -77,7 +77,7 @@
             "request": "launch",
             "name": "06-Adding persistence",
             "env": {
-                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_NAME": "SampleService",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/06-Adding persistence/index.ts",
@@ -91,7 +91,7 @@
             "request": "launch",
             "name": "07-Event propagation",
             "env": {
-                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_NAME": "SampleService",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/07-Event propagation/index.ts",
@@ -105,7 +105,7 @@
             "request": "launch",
             "name": "08-Validating schema",
             "env": {
-                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_NAME": "SampleService",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/08-Validating schema/index.ts",
@@ -119,7 +119,7 @@
             "request": "launch",
             "name": "09-Using mocks",
             "env": {
-                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_NAME": "SampleService",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/09-Using mocks/index.ts",
@@ -133,7 +133,7 @@
             "request": "launch",
             "name": "10-Monitoring & Metrics",
             "env": {
-                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_NAME": "SampleService",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/10-Monitoring & Metrics/index.ts",
@@ -146,7 +146,7 @@
             "type": "node",
             "request": "launch",
             "env": {
-                "VULCAIN_SERVICE_NAME": "SAMPLE",
+                "VULCAIN_SERVICE_NAME": "SampleService",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },
             "name": "11-Authentication",

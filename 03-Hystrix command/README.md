@@ -8,15 +8,16 @@ See [hystrix wiki](https://github.com/Netflix/Hystrix/wiki/Configuration) for mo
 
 # Running the sample
 
-This sample creates a new query handler method returning user full names
-
 ## Create customers
+
+You can create some customers with the following lines
 
 ```bash
 curl -XPOST http://localhost:8080/api/customer.random
-curl -XPOST http://localhost:8080/api/customer.random
-curl -XPOST http://localhost:8080/api/customer.random
 ```
+
+This action creates a new customer with random names from an external api.
+Sometimes (randomly) the command failed and runs the fallback.
 
 ## Display results
 
