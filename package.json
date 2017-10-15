@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Vulcainjs samples",
   "scripts": {
-    "install": "./node_modules/.bin/tsc -p ."
+    "install": "./node_modules/.bin/tsc -p .",
+    "build": "./node_modules/.bin/tsc -w -p ."
   },
   "author": "",
   "license": "MIT",

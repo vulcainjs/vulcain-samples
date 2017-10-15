@@ -22,7 +22,7 @@ export class SampleServiceCommand extends AbstractServiceCommand {
 }
 
 // Service proxy
-export class SampleService {
+export class SampleServiceProxy {
 
     private static serviceName = "SampleService";
     private static serviceVersion = "1.0";
@@ -35,6 +35,26 @@ export class SampleService {
         if(authorization) {
             this.userContext = {authorization, tenant: authorizationTenant};
         }
+    }
+    /**
+    * Action: Create a customer with random names
+    * @params [optional] args - additional url parameters
+    */
+    async randomCustomerAsync( args?): Promise<Customer> {
+        const $data = null;
+        let command = this.context.getCommand<SampleServiceCommand>('SampleServiceRandomCommand');
+        if( !command ) {
+            command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
+        }
+        const response = await command.execActionAsync<Customer>(
+            SampleServiceProxy.serviceName, 
+            SampleServiceProxy.serviceVersion, 
+            this.userContext, 
+            'customer.random', 
+            $data, 
+            args
+        );
+        return response;
     }
     /**
     * Action: Create a new entity
@@ -55,14 +75,13 @@ export class SampleService {
     async createCustomerEntityAsync(data: Customer, args?): Promise<Customer> {
         let command = this.context.getCommand<SampleServiceCommand>('SampleServiceCreateCommand');
         if( !command ) {
-            command = await this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
+            command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
         }
-        const response = await command.runAsync<Customer>(
-            'action', 
-            SampleService.serviceName, 
-            SampleService.serviceVersion, 
+        const response = await command.execActionAsync<Customer>(
+            SampleServiceProxy.serviceName, 
+            SampleServiceProxy.serviceVersion, 
+            this.userContext,
             'customer.create', 
-            this.userContext, 
             data, 
             args
         );
@@ -89,12 +108,11 @@ export class SampleService {
         if( !command ) {
             command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
         }
-        const response = await command.runAsync<Customer>(
-            'action', 
-            SampleService.serviceName, 
-            SampleService.serviceVersion, 
+        const response = await command.execActionAsync<Customer>(
+            SampleServiceProxy.serviceName, 
+            SampleServiceProxy.serviceVersion, 
+            this.userContext,
             'customer.update', 
-            this.userContext, 
             data, 
             args
         );
@@ -121,38 +139,13 @@ export class SampleService {
         if( !command ) {
             command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
         }
-        const response = await command.runAsync<boolean>(
-            'action', 
-            SampleService.serviceName, 
-            SampleService.serviceVersion, 
+        const response = await command.execActionAsync<boolean>(
+            SampleServiceProxy.serviceName, 
+            SampleServiceProxy.serviceVersion, 
+            this.userContext,
             'customer.delete', 
-            this.userContext, 
             data, 
             args
-        );
-        return response;
-    }
-    /**
-    * Query: Get schema description
-           
-    * @params {number} page - Page to retrieve
-    * @params {number} maxByPage - Item by page (default 100)
-    */
-    async get_schemasAsync( page?: number, maxByPage?: number) {
-        let command = this.context.getCommand<SampleServiceCommand>('SampleServiceGet_schemasCommand');
-        if( !command ) {
-            command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
-        }
-        const response = await command.runAsync<any[]>(
-            'query', 
-            SampleService.serviceName, 
-            SampleService.serviceVersion, 
-            '_schemas', 
-            this.userContext, 
-            null, 
-            null,
-            page, 
-            maxByPage
         );
         return response;
     }
@@ -165,11 +158,9 @@ export class SampleService {
         if( !command ) {
             command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
         }
-        const response = await command.runAsync<Customer>(
-            'get', 
-            SampleService.serviceName, 
-            SampleService.serviceVersion, 
-            'customer.get', 
+        const response = await command.execGetAsync<Customer>(
+            SampleServiceProxy.serviceName, 
+            SampleServiceProxy.serviceVersion, 
             this.userContext, 
             id,
             null
@@ -188,38 +179,13 @@ export class SampleService {
         if( !command ) {
             command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
         }
-        const response = await command.runAsync<Customer[]>(
-            'query', 
-            SampleService.serviceName, 
-            SampleService.serviceVersion, 
-            'customer.all', 
+        const response = await command.execQueryAsync<Customer[]>(
+            SampleServiceProxy.serviceName, 
+            SampleServiceProxy.serviceVersion, 
             this.userContext, 
+            'customer.all', 
             query, 
             null, 
-            page, 
-            maxByPage
-        );
-        return response;
-    }
-    /**
-    * Query: Display Swagger UI
-           
-    * @params {number} page - Page to retrieve
-    * @params {number} maxByPage - Item by page (default 100)
-    */
-    async get_swaggerAsync( page?: number, maxByPage?: number) {
-        let command = this.context.getCommand<SampleServiceCommand>('SampleServiceGet_swaggerCommand');
-        if( !command ) {
-            command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
-        }
-        const response = await command.runAsync<string[]>(
-            'query', 
-            SampleService.serviceName, 
-            SampleService.serviceVersion, 
-            '_swagger', 
-            this.userContext, 
-            null, 
-            null,
             page, 
             maxByPage
         );

@@ -1,5 +1,5 @@
 import { QueryHandler, Query, DefaultQueryHandler } from "vulcain-corejs";
-import { SampleService, Customer } from "./sampleService10";
+import { SampleServiceProxy, Customer } from "./sampleService10";
 
 @QueryHandler({ scope: '?' })
 export class MyActionHandler extends DefaultQueryHandler<Customer> {
@@ -10,7 +10,7 @@ export class MyActionHandler extends DefaultQueryHandler<Customer> {
     @Query({description: "Returns a list of customer full names", action: "fullnames", outputSchema: "string"})
     async getFullNames() {
         
-        let proxy = new SampleService(this.context);
+        let proxy = new SampleServiceProxy(this.context);
         let list = await proxy.getAllCustomerAsync();
         return list.map(c => c.firstName + " " + c.lastName);
     }
