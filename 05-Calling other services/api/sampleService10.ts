@@ -2,7 +2,7 @@ import { System, ServiceDependency, Command, IRequestContext, AbstractServiceCom
 Property, Reference } from 'vulcain-corejs';
 
 //
-// Code generated with 'vulcain generate http://localhost:8080' command 
+// Code generated with 'vulcain generate http://localhost:8080/api/_servicedescription' command 
 // Install vulcain command with npm -g vulcain-cli
 // 
 
@@ -45,13 +45,13 @@ export class SampleServiceProxy {
     * Action: Create a customer with random names
     * @params [optional] args - additional url parameters
     */
-    async randomCustomerAsync( args?): Promise<Customer> {
+    async randomCustomer( args?): Promise<Customer> {
         const $data = null;
         let command = this.context.getCommand<SampleServiceCommand>('SampleServiceRandomCommand');
         if( !command ) {
             command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
         }
-        const response = await command.execActionAsync<Customer>(
+        const response = await command.execAction<Customer>(
             SampleServiceProxy.serviceName, 
             SampleServiceProxy.serviceVersion, 
             this.userContext, 
@@ -68,21 +68,21 @@ export class SampleServiceProxy {
     * @params {string} id - .
     * @params [optional] args - additional url parameters
     */
-    async createCustomerAsync(lastName: string, firstName: string, id?: string,  args?) {
+    async createCustomer(lastName: string, firstName: string, id?: string,  args?) {
         const $data = {lastName, firstName, id};
-        return this.createCustomerEntityAsync($data, args);
+        return this.createCustomerEntity($data, args);
     }
     /**
     * Action: Create a new entity
     * @params {Customer} entity -
     * @params [optional] args - additional url parameters
     */
-    async createCustomerEntityAsync(data: Customer, args?): Promise<Customer> {
+    async createCustomerEntity(data: Customer, args?): Promise<Customer> {
         let command = this.context.getCommand<SampleServiceCommand>('SampleServiceCreateCommand');
         if( !command ) {
             command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
         }
-        const response = await command.execActionAsync<Customer>(
+        const response = await command.execAction<Customer>(
             SampleServiceProxy.serviceName, 
             SampleServiceProxy.serviceVersion, 
             this.userContext,
@@ -99,21 +99,21 @@ export class SampleServiceProxy {
     * @params {string} id - .
     * @params [optional] args - additional url parameters
     */
-    async updateCustomerAsync(lastName: string, firstName: string, id?: string,  args?) {
+    async updateCustomer(lastName: string, firstName: string, id?: string,  args?) {
         const $data = {lastName, firstName, id};
-        return this.updateCustomerEntityAsync($data, args);
+        return this.updateCustomerEntity($data, args);
     }
     /**
     * Action: Update an entity
     * @params {Customer} entity -
     * @params [optional] args - additional url parameters
     */
-    async updateCustomerEntityAsync(data: Customer, args?): Promise<Customer> {
+    async updateCustomerEntity(data: Customer, args?): Promise<Customer> {
         let command = this.context.getCommand<SampleServiceCommand>('SampleServiceUpdateCommand');
         if( !command ) {
             command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
         }
-        const response = await command.execActionAsync<Customer>(
+        const response = await command.execAction<Customer>(
             SampleServiceProxy.serviceName, 
             SampleServiceProxy.serviceVersion, 
             this.userContext,
@@ -130,21 +130,21 @@ export class SampleServiceProxy {
     * @params {string} id - .
     * @params [optional] args - additional url parameters
     */
-    async deleteCustomerAsync(lastName: string, firstName: string, id?: string,  args?) {
+    async deleteCustomer(lastName: string, firstName: string, id?: string,  args?) {
         const $data = {lastName, firstName, id};
-        return this.deleteCustomerEntityAsync($data, args);
+        return this.deleteCustomerEntity($data, args);
     }
     /**
     * Action: Delete an entity
     * @params {Customer} entity -
     * @params [optional] args - additional url parameters
     */
-    async deleteCustomerEntityAsync(data: Customer, args?): Promise<boolean> {
+    async deleteCustomerEntity(data: Customer, args?): Promise<boolean> {
         let command = this.context.getCommand<SampleServiceCommand>('SampleServiceDeleteCommand');
         if( !command ) {
             command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
         }
-        const response = await command.execActionAsync<boolean>(
+        const response = await command.execAction<boolean>(
             SampleServiceProxy.serviceName, 
             SampleServiceProxy.serviceVersion, 
             this.userContext,
@@ -158,12 +158,12 @@ export class SampleServiceProxy {
     * Get an entity by id
     * @params id string - unique id
     */
-    async getCustomerAsync(id: string): Promise<Customer> {
+    async getCustomer(id: string): Promise<Customer> {
         let command = this.context.getCommand<SampleServiceCommand>('SampleServiceGetCustomerCommand');
         if( !command ) {
             command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
         }
-        const response = await command.execGetAsync<Customer>(
+        const response = await command.execGet<Customer>(
             SampleServiceProxy.serviceName, 
             SampleServiceProxy.serviceVersion, 
             this.userContext, 
@@ -179,12 +179,12 @@ export class SampleServiceProxy {
     * @params {number} page - Page to retrieve
     * @params {number} maxByPage - Item by page (default 100)
     */
-    async getAllCustomerAsync( query?, page?: number, maxByPage?: number): Promise<Customer[]> {
+    async getAllCustomer( query?, page?: number, maxByPage?: number): Promise<Customer[]> {
         let command = this.context.getCommand<SampleServiceCommand>('SampleServiceGetAllCustomerCommand');
         if( !command ) {
             command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
         }
-        const response = await command.execQueryAsync<Customer[]>(
+        const response = await command.execQuery<Customer[]>(
             SampleServiceProxy.serviceName, 
             SampleServiceProxy.serviceVersion, 
             this.userContext, 

@@ -6,15 +6,15 @@ import { GetRandomNameCommand } from "./command";
 export class MyActionHandler extends DefaultActionHandler {
     
     // Extends default actions with a new action
-    // By default action name is the method name (without Async suffix if any)
+    // By default action name is the method name 
     // But you can force un name with the action annotation property
     @Action({description: "Create a customer with random names", action: "random", outputSchema: "Customer"})
-    async createRandomCustomerAsync() {
+    async createRandomCustomer() {
         
         // The call to this command is guaranted to get a response in less than 2500ms
         let cmd = this.context.getCommand<GetRandomNameCommand>("GetRandomNameCommand");
-        let customer = await cmd.runAsync("france");
+        let customer = await cmd.run("france");
 
-        return super.createAsync(customer);
+        return super.create(customer);
     }
 }

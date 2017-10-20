@@ -1,3 +1,7 @@
-# vulcain-samples
+# Authentication
 
-Samples &amp; quickstart for vulcainjs
+[TODO]
+
+- Bearer authentication
+- Context propagation
+

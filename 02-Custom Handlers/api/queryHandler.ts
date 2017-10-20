@@ -8,12 +8,12 @@ export class MyQueryHandler extends DefaultQueryHandler<Customer> {
     // Add a new request
     @Query({ description: "Get customer fullnames", action: "fullNames", outputSchema: "string"})
     async getFullCustomerNames() {
-        let list = await super.getAllAsync();
+        let list = await super.getAll();
         return list.map(c => c.firstName + " " + c.lastName);
     }
 
     // Or you can override default methods
-    async getAllAsync() {
-        return super.getAllAsync();
+    async getAll() {
+        return super.getAll();
     }
 }

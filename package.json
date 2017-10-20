@@ -4,13 +4,13 @@
   "description": "Vulcainjs samples",
   "scripts": {
     "install": "./node_modules/.bin/tsc -p .",
-    "build": "./node_modules/.bin/tsc -w -p ."
+    "build": "./node_modules/.bin/tsc -p ."
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@types/statsd-client": "^0.1.31",
-    "vulcain-corejs": "^2.0.0-"
+    "vulcain-corejs": ">2.0.0-"
   },
   "devDependencies": {
     "@types/node": "^8.0.31",

@@ -6,18 +6,18 @@ import { Customer } from "./model";
 export class GetRandomNameCommand extends AbstractHttpCommand {
 
     // Call an external api
-    async runAsync(region: string): Promise<Customer> {
+    async run(region: string): Promise<Customer> {
         // Call an external api providing random user names
-        let response = await this.getAsync("https://uinames.com/api?region=" + region);
+        let response = await this.get("https://uinames.com/api?region=" + region);
         let data = response.body;
         return <Customer>{ firstName: data.name, lastName: data.surname, id: data.name + data.surname };
     }
 
-    // Fallback method if error on runAsync
+    // Fallback method if error on run
     // Guarantee that a value will be provided in case of error (or timeout)
-    // Get the same parameters than runAsync
+    // Get the same parameters than run
     // This is an optional method
-    fallbackAsync(region: string): Customer  {
+    fallback(region: string): Customer  {
         return <Customer>{ firstName: "Nobody", lastName: "", id: (Math.random() * 100).toString() };
     }
 }
