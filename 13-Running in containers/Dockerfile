@@ -8,10 +8,10 @@ COPY package.json /app/
 WORKDIR /app
 RUN npm install
 
-COPY tsconfig.json gulpFile.js tslint.json /app/
+COPY gulpFile.js tslint.json /app/
 COPY src /app/src
 
-RUN gulp default
+RUN gulp compile-ts
 
 # ---------------------------------------------------
 # Final image

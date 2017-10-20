@@ -1,0 +1,4 @@
+{
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "mocha.files.glob": "dist-test/**/*.js"
+}

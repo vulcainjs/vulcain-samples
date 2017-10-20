@@ -1,6 +1,11 @@
 import { System, ServiceDependency, Command, IRequestContext, AbstractServiceCommand, Model,
 Property, Reference } from 'vulcain-corejs';
 
+//
+// Code generated with 'vulcain generate http://localhost:8080' command 
+// Install vulcain command with npm -g vulcain-cli
+// 
+
 // Models
 /**
 * .
