@@ -2,3 +2,5 @@ node_modules
 **/*.js
 **/*.js.map
 npm_debug.log
+package-lock.json
+**/api/sampleService10.ts

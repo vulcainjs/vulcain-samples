@@ -11,7 +11,7 @@ export class MyActionHandler extends DefaultQueryHandler<Customer> {
     async getFullNames() {
         
         let proxy = new SampleServiceProxy(this.context);
-        let list = await proxy.getAllCustomerAsync();
+        let list = await proxy.getAllCustomer();
         return list.map(c => c.firstName + " " + c.lastName);
     }
 }

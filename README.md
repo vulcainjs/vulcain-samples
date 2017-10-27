@@ -2,7 +2,7 @@
 
 This samples shows the different features of VulcainJS.
 
-Clone this repository and run
+Clone this repository from ```https://github.com/vulcainjs/vulcain-samples``` and run
 
 ```bash
 npm install

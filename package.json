@@ -6,7 +6,7 @@
     "install": "./node_modules/.bin/tsc -p .",
     "build": "./node_modules/.bin/tsc -w -p ."
   },
-  "author": "",
+  "author": "Alain Metge",
   "license": "MIT",
   "dependencies": {
     "@types/statsd-client": "^0.1.31",
