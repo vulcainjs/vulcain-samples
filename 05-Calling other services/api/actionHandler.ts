@@ -5,7 +5,7 @@ import { SampleServiceProxy, Customer } from "./sampleService10";
 export class MyActionHandler extends DefaultQueryHandler<Customer> {
     
     // Extends default actions with a new action
-    // By default action name is the method name (without Async suffix if any)
+    // By default action name is the method name 
     // But you can force un name with the action annotation property
     @Query({description: "Returns a list of customer full names", action: "fullnames", outputSchema: "string"})
     async getFullNames() {

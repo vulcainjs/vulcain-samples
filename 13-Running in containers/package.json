@@ -1,0 +1,10 @@
+{
+  "name": "vulcain-samples",
+  "version": "1.0.0",
+  "description": "Vulcainjs samples",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "vulcain-corejs": ">2.0.0-"
+  }
+}

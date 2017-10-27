@@ -1,14 +1,14 @@
 # Minimal application
 
-This minimal application provides a simple microservice implementing all vulcain fonctionalities:
+This minimal application provides a simple microservice implementing all vulcain fonctionalities like :
 
 ## Schema validation
 
-Data are validated and raise BadRequest in case of error
+Input data are validated automatically.
 
-## Standardized protocol
+## Standardized protocol communication
 
-* Two handlers (one for modifying and one for requesting) are generated based on the model schema.
+* Two handlers (one for modifying and one for requesting) are generated based on the model schema respecting the [CQRS](https://martinfowler.com/bliki/CQRS.html) pattern
 * API for modifying data use POST and query use GET.
 * URL are standardized and are always the same format : /api/schema.action(?params)
 
@@ -20,7 +20,7 @@ To create a customer
 curl -XPOST -d '{"firstName": "John", "lastName": "Doe"}' -H "Content-Type: application/json" http://localhost:8080/api/customer.create
 ```
 
-> verb can be create, update or delete
+> action can be create, update or delete (in this sample)
 
 To read all customers
 
@@ -34,19 +34,19 @@ or with a filter
 curl http://localhost:8080/api/customer.all?firstName=John
 ```
 
-> Without any specification, data are stored in memory a mongo provider is available and can be enabled by config.
+> By default, data are stored in memory. A mongo provider is available and can be enabled by config. See [this sample](../06%20-%20Adding%20persistence/Readme.md)
 
-## Service description
+## Self-description
 
-Every vulcain service exposes many informations:
+Each vulcain service exposes description metadata :
 
 - Use ```http://localhost:8080/api/_swagger``` to get a swagger ui
 - Use ```http://localhost:8080/api/_servicedependencies``` to display all dependencies
-- Use ```http://localhost:8080/api/_servicedescription``` to display all metadata of the service usefull to generate code
+- Use ```http://localhost:8080/api/_servicedescription``` to display all metadata of the service (usefull to generate code)
 
 ### Monitoring
 
-Vulcain service generates many types of metrics by default
+Vulcain service generates many types of metrics. By default :
 
-Promotheus metrics availables whith ```http://localhost:8080/metrics```  
-Hystrix metrics availables with ```http://localhost:8080/hystrix.stream```  
+- Promotheus metrics availables whith ```http://localhost:8080/metrics```  
+- Hystrix metrics availables with ```http://localhost:8080/hystrix.stream```  

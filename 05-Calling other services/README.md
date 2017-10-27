@@ -23,6 +23,7 @@ then go to the api folder and run the generate command
 ```bash
 cd 05-Calling other services/api
 vulcain generate http://localhost:8080
+npm run build
 ```
 
 This command uses metadata provided by each service to generate a new class based on a template.
@@ -31,7 +32,7 @@ Default template is available [here](https://github.com/vulcainjs/vulcain-code-g
 Then you can run the sample with :
 
 ```js
-curl http://localhost:8080/api/customer.fullnames
+curl http://localhost:8080/api/fullnames
 ```
 
 If you want to see metrics and trace, run the sample after configuring the two services like describe in the [section 10](../10-Monitoring & Metrics/Readme.md)
