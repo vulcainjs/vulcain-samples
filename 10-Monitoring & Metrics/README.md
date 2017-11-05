@@ -24,6 +24,31 @@ Exemple in launch.json
 
 Go to zipkin dashboard on ```localhost:9411```
 
+## Using jaeger
+
+Run jaeger server with
+
+```bash
+docker run -d -p5775:5775/udp -p6831:6831/udp -p6832:6832/udp \
+  -p5778:5778 -p16686:16686 -p14268:14268 jaegertracing/all-in-one:latest
+```
+
+> You can also used jaeger as a zipkin server see [here](http://jaeger.readthedocs.io/en/latest/getting_started/)
+
+Start service with one environment variable named ```jaeger```
+
+Exemple in launch.json
+
+```js
+  "env": {
+    "VULCAIN_SERVICE_NAME": "SAMPLE",
+    "VULCAIN_SERVICE_VERSION": "1.0",
+    "jaeger": "localhost"
+    }
+```
+
+Go to jaeger dashboard on ```localhost:16686```
+
 ## Using prometheus
 
 ```bash
@@ -54,4 +79,3 @@ docker run -d -p 9191:8080 arthurtsang/docker-hystrix-dashboard
 > Since hystrix dashboard runs in a container, you must use the host ip (your ip address) to reference the service.
 
 ## Using statsd agent
-
