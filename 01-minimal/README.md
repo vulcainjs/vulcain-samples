@@ -48,5 +48,5 @@ Each vulcain service exposes description metadata :
 
 Vulcain service generates many types of metrics. By default :
 
-- Promotheus metrics availables whith ```http://localhost:8080/metrics```  
-- Hystrix metrics availables with ```http://localhost:8080/hystrix.stream```  
+- Prometheus metrics available with ```http://localhost:8080/metrics```  
+- Hystrix metrics available with ```http://localhost:8080/hystrix.stream```  

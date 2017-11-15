@@ -12,7 +12,7 @@ docker run -d -p 9411:9411 openzipkin/zipkin
 
 Start service with one environment variable named ```zipkin```
 
-Exemple in launch.json
+Example in launch.json
 
 ```js
   "env": {
@@ -37,7 +37,7 @@ docker run -d -p5775:5775/udp -p6831:6831/udp -p6832:6832/udp \
 
 Start service with one environment variable named ```jaeger```
 
-Exemple in launch.json
+Example in launch.json
 
 ```js
   "env": {

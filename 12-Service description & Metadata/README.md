@@ -1,6 +1,6 @@
 # Metadata
 
-Every service automatically exposes some metadata availables via endpoint:
+Every service automatically exposes some metadata available via endpoint:
 
 ## Service description
 
