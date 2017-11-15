@@ -15,6 +15,8 @@ let srv = new Application('Sample')
     .useMongoProvider("localhost");
 ```
 
+or just declare a ```mongo``` environment variable.
+
 You can also just use the memory provider with file persistence.
 
 ```js
