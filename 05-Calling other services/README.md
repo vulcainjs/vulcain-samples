@@ -35,4 +35,4 @@ Then you can run the sample with :
 curl http://localhost:8080/api/fullnames
 ```
 
-If you want to see metrics and trace, run the sample after configuring the two services like describe in the [section 10](../10-Monitoring & Metrics/Readme.md)
+If you want to see metrics and trace, run the sample after configuring the two services like describe in the [section 10](../10-Instrumentations/Readme.md)

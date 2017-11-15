@@ -131,15 +131,15 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "10-Monitoring & Metrics",
+            "name": "10-Instrumentations",
             "env": {
                 "VULCAIN_SERVICE_NAME": "SampleService",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
-            "program": "${workspaceRoot}/10-Monitoring & Metrics/index.ts",
-            "cwd":"${workspaceRoot}/10-Monitoring & Metrics",
+            "program": "${workspaceRoot}/10-Instrumentations/index.ts",
+            "cwd":"${workspaceRoot}/10-Instrumentations",
             "outFiles": [
-                "${workspaceRoot}/10-Monitoring & Metrics/**/*.js"
+                "${workspaceRoot}/10-Instrumentations/**/*.js"
             ]
         },
         {

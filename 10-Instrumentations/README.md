@@ -51,19 +51,14 @@ Go to jaeger dashboard on ```localhost:16686```
 
 ## Using prometheus
 
+Update the ```targets``` property in prometheus.yml with your host ip and run prometheus with
+
 ```bash
 docker run -p 9090:9090 -d -v $(pwd)/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
 ````
 
-Exemple in launch.json
-
-```js
-  "env": {
-    "VULCAIN_SERVICE_NAME": "SAMPLE",
-    "VULCAIN_SERVICE_VERSION": "1.0",
-    "prometheus": "localhost"
-    }
-```
+run prometheus dashboard ```http://localhost:9090```  
+try ```avg(rate(vulcain_service_duration_ms_sum[1m]) / rate(vulcain_service_duration_ms_count[1m])) by (serviceFullName)```
 
 ## Using hystrix dashboard
 
