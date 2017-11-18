@@ -1,6 +1,7 @@
 import { ActionHandler, Action, DefaultActionHandler } from "vulcain-corejs";
 import { Customer } from "./model";
 import { GetRandomNameCommand } from "./command";
+import { CommandFactory } from "../../../vulcain-corejs/dist/commands/commandFactory";
 
 @ActionHandler({ scope: '?', schema: "Customer" })
 export class MyActionHandler extends DefaultActionHandler {
@@ -12,7 +13,7 @@ export class MyActionHandler extends DefaultActionHandler {
     async createRandomCustomer() {
         
         // The call to this command is guaranted to get a response in less than 2500ms
-        let cmd = this.context.getCommand<GetRandomNameCommand>("GetRandomNameCommand");
+        let cmd = CommandFactory.createCommand<GetRandomNameCommand>(this.context, "GetRandomNameCommand");
         let customer = await cmd.run("france");
 
         return super.create(customer);

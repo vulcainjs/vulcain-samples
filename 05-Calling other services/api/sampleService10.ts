@@ -1,5 +1,5 @@
 import { System, ServiceDependency, Command, IRequestContext, AbstractServiceCommand, Model,
-Property, Reference } from 'vulcain-corejs';
+Property, Reference, CommandFactory } from 'vulcain-corejs';
 
 //
 // Code generated with 'vulcain generate http://localhost:8080/api/_servicedescription' command 
@@ -58,9 +58,9 @@ export class SampleServiceProxy {
     * @params [optional] args - additional url parameters
     */
     async createCustomerEntity(data: Customer, args?): Promise<Customer> {
-        let command = this.context.getCommand<SampleServiceCommand>('SampleServiceCreateCommand');
+        let command = CommandFactory.createCommand<SampleServiceCommand>(this.context, 'SampleServiceCreateCommand');
         if( !command ) {
-            command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
+            command = CommandFactory.createCommand<SampleServiceCommand>(this.context, 'SampleServiceCommand');
         }
         const response = await command.execAction<Customer>(
             SampleServiceProxy.serviceName, 
@@ -89,9 +89,9 @@ export class SampleServiceProxy {
     * @params [optional] args - additional url parameters
     */
     async updateCustomerEntity(data: Customer, args?): Promise<Customer> {
-        let command = this.context.getCommand<SampleServiceCommand>('SampleServiceUpdateCommand');
+        let command = CommandFactory.createCommand<SampleServiceCommand>(this.context, 'SampleServiceUpdateCommand');
         if( !command ) {
-            command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
+            command = CommandFactory.createCommand<SampleServiceCommand>(this.context, 'SampleServiceCommand');
         }
         const response = await command.execAction<Customer>(
             SampleServiceProxy.serviceName, 
@@ -120,9 +120,9 @@ export class SampleServiceProxy {
     * @params [optional] args - additional url parameters
     */
     async deleteCustomerEntity(data: Customer, args?): Promise<boolean> {
-        let command = this.context.getCommand<SampleServiceCommand>('SampleServiceDeleteCommand');
+        let command = CommandFactory.createCommand<SampleServiceCommand>(this.context, 'SampleServiceDeleteCommand');
         if( !command ) {
-            command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
+            command = CommandFactory.createCommand<SampleServiceCommand>(this.context, 'SampleServiceCommand');
         }
         const response = await command.execAction<boolean>(
             SampleServiceProxy.serviceName, 
@@ -139,9 +139,9 @@ export class SampleServiceProxy {
     * @params id string - unique id
     */
     async getCustomer(id: string): Promise<Customer> {
-        let command = this.context.getCommand<SampleServiceCommand>('SampleServiceGetCustomerCommand');
+        let command = CommandFactory.createCommand<SampleServiceCommand>(this.context, 'SampleServiceGetCustomerCommand');
         if( !command ) {
-            command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
+            command = CommandFactory.createCommand<SampleServiceCommand>(this.context, 'SampleServiceCommand');
         }
         const response = await command.execGet<Customer>(
             SampleServiceProxy.serviceName, 
@@ -160,9 +160,9 @@ export class SampleServiceProxy {
     * @params {number} maxByPage - Item by page (default 100)
     */
     async getAllCustomer( query?, page?: number, maxByPage?: number): Promise<Customer[]> {
-        let command = this.context.getCommand<SampleServiceCommand>('SampleServiceGetAllCustomerCommand');
+        let command = CommandFactory.createCommand<SampleServiceCommand>(this.context, 'SampleServiceGetAllCustomerCommand');
         if( !command ) {
-            command = this.context.getCommand<SampleServiceCommand>('SampleServiceCommand');
+            command = CommandFactory.createCommand<SampleServiceCommand>(this.context, 'SampleServiceCommand');
         }
         const response = await command.execQuery<Customer[]>(
             SampleServiceProxy.serviceName, 
