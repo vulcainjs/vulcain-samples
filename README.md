@@ -10,7 +10,7 @@ npm install
 
 > Vulcainjs needs [node](https://nodejs.org/en/) version >= 6.0.0
 
-To run every sample, go to a specific directory whith cd and run node index.js.
+To run every sample, go to a specific directory with cd and run node index.js.
 
 Or use directly [vscode](https://code.visualstudio.com/), go to the debug panel and select a sample.
 

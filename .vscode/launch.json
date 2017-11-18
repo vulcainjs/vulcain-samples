@@ -48,7 +48,7 @@
             "request": "launch",
             "name": "04-Dynamic property",
             "env": {
-                "vulcainServer": "localhost:9090",
+                    "vulcainServer": "localhost:9090",
                     "VULCAIN_SERVICE_NAME": "SampleService",
                     "VULCAIN_SERVICE_VERSION": "1.0"
                 },
@@ -117,15 +117,15 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "09-Using mocks",
+            "name": "09-Using stubs",
             "env": {
                 "VULCAIN_SERVICE_NAME": "SampleService",
                 "VULCAIN_SERVICE_VERSION": "1.0"
             },            
-            "program": "${workspaceRoot}/09-Using mocks/index.ts",
-            "cwd":"${workspaceRoot}/09-Using mocks",
+            "program": "${workspaceRoot}/09-Using stubs/index.ts",
+            "cwd":"${workspaceRoot}/09-Using stubs",
             "outFiles": [
-                "${workspaceRoot}/09-Using mocks/**/*.js"
+                "${workspaceRoot}/09-Using stubs/**/*.js"
             ]
         },
         {

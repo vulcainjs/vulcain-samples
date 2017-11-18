@@ -6,7 +6,7 @@ You can set a value for a property from many sources.
 - In the configuration file **.vulcain** in the config field.
 - With any external source, A default vulcain server is provided in a docker container and can be used to test.
 
-## How to use vulcain configuration serveur
+## How to use vulcain configuration server
 
 You can see more info about this configuration server on [github](https://github.com/vulcainjs/vulcain-configurations)
 

@@ -12,7 +12,7 @@ docker run -d -p 9411:9411 openzipkin/zipkin
 
 Start service with one environment variable named ```zipkin```
 
-Exemple in launch.json
+Example in launch.json
 
 ```js
   "env": {
@@ -30,14 +30,14 @@ Run jaeger server with
 
 ```bash
 docker run -d -p5775:5775/udp -p6831:6831/udp -p6832:6832/udp \
-  -p5778:5778 -p16686:16686 -p14268:14268 jaegertracing/all-in-one:latest
+  -p5778:5778 -p16686:16686 -p14268:14268 docker pull jaegertracing/all-in-one:latest
 ```
 
 > You can also used jaeger as a zipkin server see [here](http://jaeger.readthedocs.io/en/latest/getting_started/)
 
 Start service with one environment variable named ```jaeger```
 
-Exemple in launch.json
+Example in launch.json
 
 ```js
   "env": {
