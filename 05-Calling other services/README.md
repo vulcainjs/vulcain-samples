@@ -18,16 +18,16 @@ You need to install vulcain cli to generate the proxy.
 npm install -g vulcain-cli
 ```
 
-then go to the api folder and run the generate command
+then go to the api folder and run the generate command to create a service proxy
 
 ```bash
 cd 05-Calling other services/api
-vulcain generate http://localhost:8080
+vulcain generate proxy --args address=http://localhost:8080
 npm run build
 ```
 
 This command uses metadata provided by each service to generate a new class based on a template.
-Default template is available [here](https://github.com/vulcainjs/vulcain-code-generation-templates/tree/master/microServiceProxy)
+Default template is available [here](https://github.com/vulcainjs/vulcain-code-generation-templates/tree/master/proxy)
 
 Then you can run the sample with :
 

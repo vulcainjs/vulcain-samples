@@ -9,7 +9,7 @@ EXPOSE 8080
 ENV VULCAIN_SERVICE_NAME=SimpleService
 ENV VULCAIN_SERVICE_VERSION=1.0
 
-HEALTHCHECK --interval=30s --timeout=1s CMD curl -f http://localhost:8080/health || exit 1
+HEALTHCHECK --interval=10s --timeout=1s CMD curl -f http://localhost:8080/health || exit 1
 
 WORKDIR /app
 COPY package.json /app

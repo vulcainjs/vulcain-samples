@@ -1,0 +1,54 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    serviceName: simpleservice
+    serviceVersion: "1.0"
+  name: simpleservice-1.0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      serviceName: simpleservice
+      serviceVersion: "1.0"
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        serviceName: simpleservice
+        serviceVersion: "1.0"
+    spec:
+      containers:
+        - image: malain/simpleservice:1.0
+          name: simpleservice
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 3
+            timeoutSeconds: 1
+            periodSeconds: 10
+            failureThreshold: 1
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: simpleservice1-0
+spec:
+  ports:
+    # Accept traffic sent to port 80
+    - name: http
+      port: 8080
+  selector:
+      serviceName: simpleservice
+      serviceVersion: "1.0"
+  type: NodePort
