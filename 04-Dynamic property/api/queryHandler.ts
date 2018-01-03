@@ -1,4 +1,4 @@
-import { QueryHandler, Query, IScopedComponent, ConfigurationProperty, System, DynamicConfiguration, IRequestContext } from "vulcain-corejs";
+import { QueryHandler, Query, IScopedComponent, ConfigurationProperty, DynamicConfiguration, IRequestContext } from "vulcain-corejs";
 
 @QueryHandler({ scope: '?' })
 export class MyValueHandler implements IScopedComponent {

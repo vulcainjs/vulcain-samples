@@ -1,5 +1,5 @@
-import { System, ServiceDependency, Command, IRequestContext, AbstractServiceCommand, Model,
-Property, Reference, CommandFactory } from 'vulcain-corejs';
+import { ServiceDependency, Command, IRequestContext, AbstractServiceCommand, Model,
+Property, Reference, CommandFactory, Service } from 'vulcain-corejs';
 
 //
 // Code generated with 'vulcain generate http://localhost:8080/api/_servicedescription' command 
@@ -21,7 +21,7 @@ export class Customer {
 }
 
 // Command
-@Command({ executionTimeoutInMilliseconds: 1500 })
+@Command({ executionTimeoutInMilliseconds: 35000 })
 @ServiceDependency('SampleService', '1.0', 'http://localhost:8080/api/_servicedescription') 
 export class SampleServiceCommand extends AbstractServiceCommand {
 }
@@ -36,7 +36,7 @@ export class SampleServiceProxy {
     /**
     * 
     */
-    constructor(private context: IRequestContext, authorization?: string, authorizationTenant=System.defaultTenant) {
+    constructor(private context: IRequestContext, authorization?: string, authorizationTenant=Service.defaultTenant) {
         if(authorization) {
             this.userContext = {authorization, tenant: authorizationTenant};
         }

@@ -26,13 +26,13 @@ vulcain generate proxy --args address=http://localhost:8080
 npm run build
 ```
 
-This command uses metadata provided by each service to generate a new class based on a template.
+This command uses metadata provided by any vulcain service to generate a new class based on a template.
 Default template is available [here](https://github.com/vulcainjs/vulcain-code-generation-templates/tree/master/proxy)
 
 Then you can run the sample with :
 
 ```js
-curl http://localhost:8080/api/fullnames
+curl http://localhost:8081/api/fullnames
 ```
 
 If you want to see metrics and trace, run the sample after configuring the two services like describe in the [section 10](../10-Instrumentations/Readme.md)
