@@ -12,17 +12,17 @@ curl -XPOST http://localhost:8080/api/customer.random
 
 ## Generate the proxy
 
-You need to install vulcain cli to generate the proxy.
+You need to install [Apotek](https://github.com/malain/apotek) to generate the proxy.
 
 ```bash
-npm install -g vulcain-cli
+npm install -g apotek
 ```
 
 then go to the api folder and run the generate command to create a service proxy
 
 ```bash
 cd 05-Calling other services/api
-vulcain generate proxy --args address=http://localhost:8080
+apotek generate --template proxy --address http://localhost:8080
 npm run build
 ```
 

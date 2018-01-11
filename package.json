@@ -4,7 +4,7 @@
   "description": "Vulcainjs samples",
   "scripts": {
     "install": "./node_modules/.bin/tsc -p .",
-    "build": "./node_modules/.bin/tsc -p ."
+    "build": "./node_modules/.bin/tsc -p . -w"
   },
   "author": "Alain Metge",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "vulcain-corejs": ">2.0.0-"
   },
   "devDependencies": {
-    "@types/node": "^8.0.31",
-    "typescript": "^2.5.3"
+    "@types/node": "^8.5.1",
+    "typescript": "^2.6.2"
   }
 }
