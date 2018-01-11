@@ -41,5 +41,3 @@ curl -XPOST --header "x-vulcain-use-stub-session: session1" http://localhost:808
 ```
 
 > Note that stub header are propagated between requests. So you can stub any service in your request pipeline. For example, try to run sample 05, with the following header : "x-vulcain-save-stub-session: session1=^SampleService-1\.0$"
-
-
