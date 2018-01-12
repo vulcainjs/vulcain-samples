@@ -50,3 +50,5 @@ Vulcain service generates many types of metrics. By default :
 
 - Prometheus metrics available with ```http://localhost:8080/metrics```  
 - Hystrix metrics available with ```http://localhost:8080/hystrix.stream```  
+
+See [10-Instrumentations](../10-Instrumentations/Readme.md) for more details.

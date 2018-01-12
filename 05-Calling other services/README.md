@@ -27,7 +27,7 @@ npm run build
 ```
 
 This command uses metadata provided by any vulcain service to generate a new class based on a template.
-Default template is available [here](https://github.com/vulcainjs/vulcain-code-generation-templates/tree/master/proxy)
+Default template is available [here](https://github.com/vulcainjs/vulcain-code-generation-templates/tree/master/generate/proxy)
 
 Then you can run the sample with :
 
