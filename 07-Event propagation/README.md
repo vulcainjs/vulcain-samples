@@ -1,7 +1,7 @@
 # Event propagation
 
 Every vulcain action generates an event which can be take into account by an event handler.
-Events are send over a message bus and can be subscribed by using rxjs in many service instances.
+Events are send over a message bus and can be subscribed by using [rxjs](http://reactivex.io/) in many service instances.
 
 Event contains result action and can be filtered by domain, schema and action.
 
