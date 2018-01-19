@@ -1,6 +1,6 @@
 # Vulcain hystrix commands
 
-Vulcain implements hystrix command and provides the same functionalities.
+Vulcain implements hystrix command providing same features.
 
 See [hystrix wiki](https://github.com/Netflix/Hystrix/wiki/Configuration) for more information.
 

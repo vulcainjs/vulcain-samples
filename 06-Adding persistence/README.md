@@ -24,6 +24,6 @@ let srv = new Application('Sample')
     .useMemoryProvider("dataFolder");
 ```
 
-Memory model try to provide the same functionalities than the mongodb provider simulating its query model.
+Memory provider try to provide the same features than the mongodb provider simulating its query model.
 
 > Do not use it for production, all data are saved on file on **every** change.

@@ -2,8 +2,8 @@ import { ServiceDependency, Command, IRequestContext, AbstractServiceCommand, Mo
 Property, Reference, CommandFactory, Service } from 'vulcain-corejs';
 
 //
-// Code generated with 'vulcain generate http://localhost:8080/api/_servicedescription' command 
-// Install vulcain command with npm -g vulcain-cli
+// Code generated with 'apotek generate' command 
+// Install apotek command with npm -g apotek
 // 
 
 // Models

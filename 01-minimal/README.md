@@ -1,6 +1,6 @@
 # Minimal application
 
-This minimal application provides a simple microservice implementing all vulcain fonctionalities like :
+This minimal application provides a simple microservice implementing all vulcain features like :
 
 ## Schema validation
 

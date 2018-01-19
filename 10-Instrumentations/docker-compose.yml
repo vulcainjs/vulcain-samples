@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - type: volume
+        source: prometheus
+        target: /etc/prometheus prom/prometheus
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    ports:
+      - "5775:5775/udp" 
+      - "6831:6831/udp" 
+      - "6832:6832/udp" 
+      - "5778:5778" 
+      - "16686:16686" 
+      - "14268:14268" 
+  hystrix:
+    image: arthurtsang/docker-hystrix-dashboard
+    ports:
+      - "9191:8080"
