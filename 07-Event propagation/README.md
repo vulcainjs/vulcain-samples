@@ -12,7 +12,7 @@ If you want a more robust and multi instance event propagation, you can use the 
 **Run a rabbitmq instance**
 
 ```bash
-docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3
+docker run -d --hostname my-rabbit --name rabbit -p 15672:15672 -p 5672:5672 rabbitmq:management-alpine
 ```
 
 **Configure it in the service**

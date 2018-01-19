@@ -1,4 +1,4 @@
-import { QueryHandler, GetAllResult, Query, DefaultQueryHandler } from "vulcain-corejs";
+import { QueryHandler, QueryResult, Query, DefaultQueryHandler } from "vulcain-corejs";
 import { Customer } from "./model";
 
 // Extends default handler providing query functionalities (get and all)
@@ -6,10 +6,10 @@ import { Customer } from "./model";
 export class MyQueryHandler extends DefaultQueryHandler<Customer> {
     
     // Add a new request
-    @Query({ description: "Get customer fullnames", action: "fullNames", outputSchema: "string"})
-    async getFullCustomerNames(): Promise<GetAllResult> {
+    @Query({ description: "Get customer fullnames", action: "fullNames", outputType:"many", outputSchema: "string"})
+    async getFullCustomerNames(): Promise<QueryResult> {
         let result = await super.getAll();
-        result.values = result.values.map(c => c.firstName + " " + c.lastName);
+        result.value = result.value.map(c => c.firstName + " " + c.lastName);
         return result;
     }
 
