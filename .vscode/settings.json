@@ -1,7 +1,8 @@
 {
     "typescript.tsdk": "node_modules\\typescript\\lib",
     "mocha.files.glob": "dist-test/**/*.js",
-    "cSpell.words": [
-        "Vulcain"
-    ]
+    "files.exclude": {
+        "**/*.js": true,
+        "**/*.js.map": true
+    }
 }
