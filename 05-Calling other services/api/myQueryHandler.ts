@@ -4,14 +4,14 @@ import { Service1Proxy, Customer } from "./service110";
 @QueryHandler({ scope: '?' })
 export class MyQueryHandler extends DefaultQueryHandler<Customer> {
     
-    // Extends default actions with a new action
-    // By default action name is the method name 
-    // But you can force un name with the action annotation property
     @Query({description: "Returns a list of customer full names", action: "fullnames", outputType: "many", outputSchema: "string"})
     async getFullNames() {
         
+        // Use the generated proxy class to call another service
         let proxy = new Service1Proxy(this.context);
+        // Get all customer 
         let res = await proxy.getAllCustomer();
+        // Transform result value
         return { ...res, value: res.value.map(c => c.firstName + " " + c.lastName) };
     }
 }

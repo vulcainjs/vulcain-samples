@@ -12,17 +12,17 @@ curl -XPOST http://localhost:8080/api/customer.random
 
 ## Generate the proxy
 
-You need to install [Apotek](https://github.com/malain/apotek) to generate the proxy.
+You need to install [Pastaga](https://github.com/malain/pastaga) to generate the proxy.
 
 ```bash
-npm install -g apotek
+npm install -g pastaga
 ```
 
-then go to the api folder and run the generate command to create a service proxy
+then run the generate command to create a service proxy in the api folder
 
 ```bash
 cd 05-Calling other services/api
-apotek generate --template proxy --address http://localhost:8080
+pastaga generate --template proxy --address http://localhost:8080
 npm run build
 ```
 
