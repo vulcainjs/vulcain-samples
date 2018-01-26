@@ -34,7 +34,7 @@ or with a filter
 curl http://localhost:8080/api/customer.all?firstName=John
 ```
 
-> By default, data are stored in memory. A mongo provider is available and can be enabled by config. See [this sample](../06 - Adding persistence/README.md)
+> By default, data are stored in memory. A mongo provider is available and can be enabled by config. See [this sample](../06-Adding%20persistence/README.md)
 
 ## Self-description
 
