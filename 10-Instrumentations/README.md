@@ -1,28 +1,12 @@
 # Monitoring
 
-## Using zipkin
+Vulcain generates many metrics. You just set some environment variable when you execute a service to enable metrics for a specific tool.
 
-Vulcain generates zipkin trace with correlation id between multiple requests.
-
-Run local zipkin server
+> You can use docker-compose to run all server describe in this file. **Update** prometheus/prometheus.yml with your host ip before running docker-compose.
 
 ```bash
-docker run -d -p 9411:9411 openzipkin/zipkin
+docker-compose up -d
 ```
-
-Start service with one environment variable named ```zipkin```
-
-Example in launch.json
-
-```js
-  "env": {
-    "VULCAIN_SERVICE_NAME": "SAMPLE",
-    "VULCAIN_SERVICE_VERSION": "1.0",
-    "zipkin": "localhost"
-    }
-```
-
-Go to zipkin dashboard on ```localhost:9411```
 
 ## Using jaeger
 
@@ -58,7 +42,6 @@ Update the ```targets``` property in prometheus.yml with your host ip and run pr
 docker run -p 9090:9090 -d -v $(pwd)/prometheus:/etc/prometheus prom/prometheus
 ````
 
-
 run prometheus dashboard ```http://localhost:9090```  
 try ```avg(rate(vulcain_service_duration_ms_sum[1m]) / rate(vulcain_service_duration_ms_count[1m])) by (serviceFullName)```
 
@@ -70,7 +53,7 @@ docker run -d -p 9191:8080 arthurtsang/docker-hystrix-dashboard
 
 - Start a service (default port is 8080)
 - Open hystrix dashboard on your navigator with ```http://localhost:9191```
-- Set the hystrix service endpoint in the first textbox with ```http://<host_ip>:8080/hystrix.stream```
+- Set the hystrix service endpoint in the first input box with ```http://<your_host_ip>:8080/hystrix.stream```
 - Click on __Add stream__ then __Monitor streams__
 
 > Since hystrix dashboard runs in a container, you must use the host ip (your ip address) to reference the service.

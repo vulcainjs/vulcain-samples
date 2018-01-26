@@ -45,7 +45,7 @@ metadata:
   name: simpleservice1-0
 spec:
   ports:
-    # Accept traffic sent to port 80
+    # Accept traffic sent to port 8080
     - name: http
       port: 8080
   selector:

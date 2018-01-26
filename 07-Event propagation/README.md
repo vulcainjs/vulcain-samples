@@ -1,11 +1,12 @@
 # Event propagation
 
 Every vulcain action generates an event which can be take into account by an event handler.
-Events are send over a message bus and can be subscribed by using [rxjs](http://reactivex.io/) in many service instances.
 
-Event contains result action and can be filtered by domain, schema and action.
+Events are send over a message bus and can be subscribed in many service instances by implementing an event handler.
 
-By default, if any message bus is defined, vulcain uses a simple memory bus to propagate event in the current instance.
+Event contains result action and can be filtered by domain, schema, action and filter using [rxjs](http://reactivex.io/) 
+
+By default, if any message bus is defined, vulcain uses a simple memory bus to propagate event in the current instance (useful for testing)
 
 If you want a more robust and multi instance event propagation, you can use the built-in ```rabbitmq``` provider.
 

@@ -16,5 +16,6 @@ export class Customer {
 // Start service
 const domainName = "Sample";
 let srv = new Application(domainName);
-//srv.useRabbitmqBus('localhost');
+// If you do not define an environment variable you can use the following line.
+//srv.useRabbitmqBus('localhost'); 
 srv.start(8080);

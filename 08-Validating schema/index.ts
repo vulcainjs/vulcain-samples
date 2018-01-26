@@ -1,17 +1,15 @@
 import { Application, Model, Property, QueryHandler, ActionHandler, Validator, SchemaTypeDefinition, IRequestContext } from 'vulcain-corejs';
 
-// Define and register a new custom type
+// Define and register a new custom type (or validator)
 @SchemaTypeDefinition()
 class Age {
-    type: string;
+    type = "number"; // Define a sub type (optional)
+    // Custom property
+    $min: number = 0;
 
-    constructor() {
-        this.type = "number"; // Define a sub type (optional)
-    }
-
-    validate(val: number, context: IRequestContext) {
-        if (val < 0 || val > 123)
-            return "Invalid age for property {$propertyName}";
+    validate(val: number, context?: IRequestContext) {
+        if (val < this.$min || val > 123)
+            return "Age must be between {$min} and 123";
         return null;
     }
 
@@ -33,19 +31,20 @@ class Customer {
         return;
     }
 
+    // Public (exposed) property must have a Property annotation to be validated and bounded
     @Property({ type: 'string', required: true, description: "First name" }) 
-    @Validator("length", { min: 4 }) // Default validator
+    @Validator("length", { min: 4 }) // Default validator are "length", "pattern"
     firstName: string;
 
     @Property({ type: 'string', required: true, description: "Last name" })
-    @Validator("pattern", { pattern: /^[A-Z]\w*/ }) // Default validator
+    @Validator("pattern", { pattern: /^[A-Z]\w*/ }) 
     lastName: string;
 
     // Custom type
-    @Property({type: "Age", required: true})
+    @Property({type: "Age", required: true}, {min:10})
     age: number;
 
-    @Property({ type: "uid" }) // Create a new unique id if empty
+    @Property({ type: "uid", isKey: true }) // Create a new unique id if empty
     id: string;
 }
 

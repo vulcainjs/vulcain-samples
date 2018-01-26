@@ -6,6 +6,6 @@ export class Customer {
     firstName: string;
     @Property({ type: 'string', required: true })
     lastName: string;
-    @Property({ type: "uid" })
+    @Property({ type: "uid", isKey: true})
     id: string;
 }

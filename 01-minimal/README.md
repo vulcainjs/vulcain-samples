@@ -10,9 +10,9 @@ Input data are validated automatically.
 
 * Two handlers (one for modifying and one for requesting) are generated based on the model schema respecting the [CQRS](https://martinfowler.com/bliki/CQRS.html) pattern
 * API for modifying data use POST and query use GET.
-* URL are standardized and are always the same format : /api/schema.action(?params)
+* URL are standardized and have always the same format : /api/schema.action(?params)
 
-Exemples:
+Examples:
 
 To create a customer
 
@@ -42,7 +42,7 @@ Each vulcain service exposes description metadata :
 
 - Use ```http://localhost:8080/api/_swagger``` to get a swagger ui
 - Use ```http://localhost:8080/api/_servicedependencies``` to display all dependencies
-- Use ```http://localhost:8080/api/_servicedescription``` to display all metadata of the service (usefull to generate code)
+- Use ```http://localhost:8080/api/_servicedescription``` to display all metadata of the service (useful to generate code)
 
 ### Monitoring
 
@@ -50,5 +50,6 @@ Vulcain service generates many types of metrics. By default :
 
 - Prometheus metrics available with ```http://localhost:8080/metrics```  
 - Hystrix metrics available with ```http://localhost:8080/hystrix.stream```  
+- Jaeger trace
 
-See [10-Instrumentations](../10-Instrumentations/Readme.md) for more details.
+See [10-Instrumentations](../10-Instrumentations/README.md) for more details.

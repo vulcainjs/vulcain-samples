@@ -1,6 +1,8 @@
 # Samples &amp; quickstart for vulcainjs
 
-This samples shows the different features of [VulcainJS](http://www.vulcainjs.org/).
+This samples describe the different features of [VulcainJS](http://www.vulcainjs.org/).
+
+## How to use it
 
 Clone this repository from ```https://github.com/vulcainjs/vulcain-samples``` and run
 
@@ -10,11 +12,11 @@ npm install
 
 > Vulcainjs needs [node](https://nodejs.org/en/) version >= 6.0.0
 
-To run every sample, go to a specific directory with cd and run node index.js.
+To run every sample, go to a specific directory with cd and run ```node index.js```.
 
-Or use directly [vscode](https://code.visualstudio.com/), go to the debug panel and select a sample.
+Or if you use [vscode](https://code.visualstudio.com/), go to the debug panel and select a sample.
 
-You can recompile the code with the following command.
+If you want to change the code, you must recompile it with the following command:
 
 ```bash
 npm run build

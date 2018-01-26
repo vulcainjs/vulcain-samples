@@ -9,7 +9,7 @@ class Customer {
     firstName: string;
     @Property({ type: 'string', required: true })
     lastName: string;
-    @Property({ type: "uid" }) // Create a new unique id if empty
+    @Property({ type: "uid", isKey:true }) // Create a new unique id if empty
     id: string;
 }
 
