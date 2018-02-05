@@ -9,7 +9,7 @@ export class MyValueHandler implements IScopedComponent {
     @ConfigurationProperty("MyValue", "string")
     private myValue = DynamicConfiguration.getProperty<string>("MyValue", "?????");
 
-    @Query({ description: "Get property value", action: "value" })
+    @Query({ description: "Get property value", name: "value" })
     async getValue() {
         // Returns the property value
         return this.myValue.value;

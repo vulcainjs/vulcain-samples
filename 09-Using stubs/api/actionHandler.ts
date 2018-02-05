@@ -6,7 +6,7 @@ import { GetRandomNameCommand } from "./command";
 @ActionHandler({ scope: '?', schema: "Customer" })
 export class MyActionHandler extends DefaultActionHandler {
     
-    @Action({description: "Create a customer with random names", action: "random", outputSchema: "Customer"})
+    @Action({description: "Create a customer with random names", name: "random", outputSchema: "Customer"})
     async createRandomCustomer() {
         
         let cmd = CommandFactory.createCommand<GetRandomNameCommand>(this.context, "GetRandomNameCommand");

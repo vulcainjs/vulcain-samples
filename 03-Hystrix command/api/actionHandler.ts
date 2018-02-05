@@ -10,7 +10,7 @@ export class MyActionHandler extends DefaultActionHandler {
     // By default action name is the method name 
     // But you can force a name with the action annotation property
     // Annotation is used to declare metadata used by swagger ui for example and by vulcain internally.
-    @Action({description: "Create a customer with random names", action: "random", outputSchema: "Customer"})
+    @Action({description: "Create a customer with random names", name: "random", outputSchema: "Customer"})
     async createRandomCustomer() {
         
         // The call to this command is guaranteed to get a response in less than 2500ms

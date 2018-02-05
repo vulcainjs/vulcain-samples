@@ -9,7 +9,7 @@ Input data are validated automatically.
 ## Standardized protocol communication
 
 * Two handlers (one for modifying and one for requesting) are generated based on the model schema respecting the [CQRS](https://martinfowler.com/bliki/CQRS.html) pattern
-* API for modifying data use POST and query use GET.
+* API for modifying data use POST and query use GET (or POST).
 * URL are standardized and have always the same format : /api/schema.action(?params)
 
 Examples:
@@ -53,3 +53,15 @@ Vulcain service generates many types of metrics. By default :
 - Jaeger trace
 
 See [10-Instrumentations](../10-Instrumentations/README.md) for more details.
+
+### GraphQL
+
+Thanks to metadata, enabling [graphql](http://graphql.org/) is straightforward.
+You can add graphql exposition to your service with this simple code and the index.ts file.
+
+```js
+let srv = new Application('Sample')
+                .enableGraphQL();
+```
+
+Graphql endpoint is available on ```http://localhost:8080/api/_graphql```

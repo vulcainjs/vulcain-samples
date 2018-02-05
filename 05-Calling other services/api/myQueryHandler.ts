@@ -5,7 +5,7 @@ import { Service1Proxy, Customer } from "./service110";
 export class MyQueryHandler extends DefaultQueryHandler<Customer> {
     
     // This query return a customer full names list
-    @Query({description: "Returns a list of customer full names", action: "fullnames", outputType: "many", outputSchema: "string"})
+    @Query({description: "Returns a list of customer full names", name: "fullnames", outputCardinality: "many", outputSchema: "string"})
     async getFullNames(query?) {
         
         // Use the generated proxy class to call another service
