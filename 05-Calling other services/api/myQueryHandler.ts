@@ -1,5 +1,5 @@
 import { QueryHandler, Query, DefaultQueryHandler } from "vulcain-corejs";
-import { Service1Proxy, Customer } from "./service110";
+import { SampleServiceProxy, Customer } from "./sampleService10";
 
 @QueryHandler({ scope: '?' })
 export class MyQueryHandler extends DefaultQueryHandler<Customer> {
@@ -9,7 +9,7 @@ export class MyQueryHandler extends DefaultQueryHandler<Customer> {
     async getFullNames(query?) {
         
         // Use the generated proxy class to call another service
-        let proxy = new Service1Proxy(this.context);
+        let proxy = new SampleServiceProxy(this.context);
         // Get all customers 
         let res = await proxy.getAllCustomer(query);
         // Transform result value

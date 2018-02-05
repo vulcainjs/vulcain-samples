@@ -24,8 +24,8 @@ then run the generate command to create a service proxy in the api folder
 
 ```bash
 cd 05-Calling other services/api
-pastaga generate --template proxy --address http://localhost:8080
-npm run build
+pastaga generate --template proxy --address http://localhost:8080 # Then always press Enter
+npm run build # Don't forget to rebuild
 ```
 
 This command uses metadata provided by any vulcain service to generate a new class based on a template. This metadata are available with :
