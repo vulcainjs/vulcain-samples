@@ -18,6 +18,11 @@ class Age {
     // bind(val): number { return val;}
 }
 
+@Model() 
+export class Hobby {
+    @Property({ type: "string", required: true })
+    name: string;
+}    
 
 @Model({ validate: Customer.validate})
 @ActionHandler({ scope: '?' })    // Anonymous access
@@ -46,8 +51,11 @@ class Customer {
 
     @Property({ type: "uid", isKey: true }) // Create a new unique id if empty
     id: string;
+
+    @Property({ type: "Hobby", cardinality: "many" })
+    hobbies: Hobby[];
 }
 
 // Start service
-let srv = new Application('Sample');
+let srv = new Application('Sample').enableGraphQL();
 srv.start(8080);
