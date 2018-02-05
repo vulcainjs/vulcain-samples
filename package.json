@@ -9,10 +9,10 @@
   "author": "Alain Metge",
   "license": "MIT",
   "dependencies": {
-    "vulcain-corejs": ">2.0.0-"
+    "vulcain-corejs": "^2.0.0-beta918"
   },
   "devDependencies": {
     "@types/node": "^8.5.1",
-    "typescript": "^2.6.2"
+    "typescript": "^2.7.1"
   }
 }

@@ -1,4 +1,4 @@
-version: '3'
+version: '3.2'
 
 services:
   prometheus:
@@ -6,9 +6,7 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - type: volume
-        source: prometheus
-        target: /etc/prometheus prom/prometheus
+      - "./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
   jaeger:
     image: jaegertracing/all-in-one:latest
     ports:
@@ -22,3 +20,12 @@ services:
     image: arthurtsang/docker-hystrix-dashboard
     ports:
       - "9191:8080"
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+  rabbit:
+    image: rabbitmq:management-alpine
+    ports:
+      - "15672:15672"
+      - "5672:5672"
