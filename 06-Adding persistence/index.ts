@@ -13,7 +13,8 @@ class Customer {
 }
 
 let srv = new Application('Sample')
-    // Vulcain provides a simple mongodb provider
+    //.useMemoryProvider("data")    // Persist memory data into 'data' folder 
+    // Or use the simple built-in mongodb provider
     .useMongoProvider("mongo");
 
 srv.start(8080);
