@@ -4,7 +4,7 @@ import { SampleServiceProxy, Customer } from "./sampleService10";
 @QueryHandler({ scope: '?' })
 export class MyQueryHandler extends DefaultQueryHandler<Customer> {
     
-    // This query return a customer full names list
+    // This query returns a list of customer full names
     @Query({description: "Returns a list of customer full names", name: "fullnames", outputCardinality: "many", outputSchema: "string"})
     async getFullNames(query?) {
         

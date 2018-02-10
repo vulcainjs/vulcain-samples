@@ -1,13 +1,13 @@
 # Dynamic properties
 
-You can set a value for a property from many sources.
+You can set a value to a property in several ways.
 
 - As an environment variable named MyValue or with its alias myvalue or MY_VALUE
 - As a kubernetes or docker secret file
 - In the configuration file **vulcain.json** in the **config** property.
-- With a http external source, A default vulcain server is provided in a docker container and can be used to test.
+- With an external http source, A default vulcain server is provided in a docker container and can be used for testing.
 
-> Dynamic properties can be updated at runtime and changes are automatically available (every 60s by default)
+> Dynamic properties can be updated at runtime and changes are automatically propagated (every 60s by default)
 
 ## How to use vulcain configuration server
 

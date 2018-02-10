@@ -2,8 +2,8 @@ import { Application, Model, Property, QueryHandler, ActionHandler } from 'vulca
 
 // Declare a schema with default handlers for query (Get, All) and actions (create, delete, update)
 @Model()
-@ActionHandler({ scope: '?' })    // Anonymous access
-@QueryHandler({scope: '?'})       // Anonymous access
+@ActionHandler({ scope: '?' })    // ? meaning Anonymous access
+@QueryHandler({scope: '?'})       // ? meaning Anonymous access
 class Customer {
     @Property({type:'string', required: true}) 
     firstName: string;
