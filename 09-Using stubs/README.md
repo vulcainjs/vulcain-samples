@@ -1,6 +1,6 @@
 # Testing with stubs
 
-This sample shows you how to use stubs for testing service.
+This sample shows you how to use stubs to test service.
 It uses the sample code from sample 03 generating random customer
 
 ### Registering a stub
@@ -16,7 +16,7 @@ Variable takes a string with the following format:
 
 - session-name[=filter]
 
-Session name will be use as an identifier to save data.
+Session name will be used as an identifier to save data.
 An (optional) regex expression can be used to filter which service will be saved.
 
 Since our sample has only one external request, we can use just the session name.
@@ -25,7 +25,7 @@ Since our sample has only one external request, we can use just the session name
 curl -XPOST --header "x-vulcain-save-stub-session: session1" http://localhost:8080/api/customer.random
 ```
 
-By default, data are saved in vulcain.json file (Data stub provider can be used to persist data)
+By default, data is saved in vulcain.json file (Data stub provider can be used to persist data)
 
 ### Using stub session
 
@@ -44,4 +44,4 @@ curl -XPOST --header "x-vulcain-use-stub-session: session1" http://localhost:808
 
 Every request will produce the same result.
 
-> Note that stub header are propagated between requests. So you can stub any service in your request pipeline. For example, try to run sample 05, with the following header : "x-vulcain-save-stub-session: session1=^SampleService-1\.0$"
+> Note that stub headers are propagated accross requests. So you can stub any service in your request pipeline. For example, try to run sample 05, with the following header : "x-vulcain-save-stub-session: session1=^SampleService-1\.0$"

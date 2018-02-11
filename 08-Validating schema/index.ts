@@ -14,7 +14,7 @@ class Age {
     }
 
     // Optional bind method
-    // use to convert the input value
+    // used to convert the input value
     // bind(val): number { return val;}
 }
 
