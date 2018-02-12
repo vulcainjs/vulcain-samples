@@ -46,7 +46,7 @@ class Customer {
     lastName: string;
 
     // Custom type
-    @Property({type: "Age", required: true}, {min:10})
+    @Property({ type: "Age", required: true, typeProperties: { min: 10 } })
     age: number;
 
     @Property({ type: "uid", isKey: true }) // Create a new unique id if empty

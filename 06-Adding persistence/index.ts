@@ -1,10 +1,11 @@
-import { Application, Model, Property, QueryHandler, ActionHandler } from 'vulcain-corejs';
+import { Application, Model, Property, QueryHandler, ActionHandler, Validator } from 'vulcain-corejs';
 
 @Model()
 @ActionHandler({ scope: '?' })    
 @QueryHandler({scope: '?'})    
 class Customer {
-    @Property({type:'string', required: true})
+    @Property({ type: 'string', required: true })
+    @Validator("length", {min:4})    
     firstName: string;
     @Property({ type: 'string', required: true })
     lastName: string;
@@ -15,6 +16,6 @@ class Customer {
 let srv = new Application('Sample')
     //.useMemoryProvider("data")    // Persist memory data into 'data' folder 
     // Or use the simple built-in mongodb provider
-    .useMongoProvider("mongo");
+    .useMongoProvider("localhost");
 
 srv.start(8080);

@@ -1,5 +1,6 @@
 node_modules
 **/*.js
+!**/admin-on-rest/**/*.js
 **/*.js.map
 **/*.d.ts
 npm_debug.log
