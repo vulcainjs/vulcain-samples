@@ -23,3 +23,9 @@ pastaga generate --template adminOnRest --address http://localhost:8080
 - And add resource line inside **Admin** tag.
 
 See [Admin On Rest documentation](https://marmelab.com/admin-on-rest/index.html) for more customization.
+
+## Test it
+
+- Start service 01 
+- Generate proxy class in src folder
+- Run admin on rest with ```npm run start``` from this folder
