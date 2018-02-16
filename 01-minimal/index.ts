@@ -2,8 +2,8 @@ import { Application, Model, Property, QueryHandler, ActionHandler } from 'vulca
 
 // Declare a schema with default handlers for query (Get, All) and actions (create, delete, update)
 @Model()
-@ActionHandler({ scope: '?' })    // ? meaning Anonymous access
-@QueryHandler({scope: '?'})       // ? meaning Anonymous access
+@ActionHandler({ scope: '?' })    // ? = Anonymous access
+@QueryHandler({scope: '?'})      
 class Customer {
     @Property({type:'string', required: true}) 
     firstName: string;
@@ -14,6 +14,5 @@ class Customer {
 }
 
 // Start service
-let srv = new Application('Sample')
-                .enableGraphQL();
+let srv = new Application('Sample').enableGraphQL();
 srv.start(8080);

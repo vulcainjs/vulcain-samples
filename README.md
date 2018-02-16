@@ -21,3 +21,19 @@ If you want to change the code, you must recompile it with the following command
 ```bash
 npm run build
 ```
+
+## How to begin with vulcainjs
+
+Use **pastaga** to generate an initial vulcain project
+
+Install it with: 
+
+```js
+npm i -g pastaga
+```
+
+And run
+
+```js
+pastaga init 
+```

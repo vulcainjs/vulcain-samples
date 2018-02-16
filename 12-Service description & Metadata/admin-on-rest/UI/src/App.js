@@ -9,7 +9,8 @@ import PostIcon from 'material-ui/svg-icons/action/book';
 // To add a new resource generated with pastaga uncomment the following line and 
 // the Resource line in the Admin component. 
 // Do not forget to update urlMappings object
-import {CustomerCreate, CustomerEdit, CustomerList} from './sampleService.Components.js'
+//import {CustomerCreate, CustomerEdit, CustomerList} from './sampleService.Components.js'
+//<Resource name="customer" list={CustomerList} edit={CustomerEdit} create={CustomerCreate} icon={PostIcon} remove={Delete} /> 
 
 // Url mappings by resource name
 const urlMappings = {
@@ -19,7 +20,6 @@ const urlMappings = {
 
 const App = () => (
   <Admin dashboard={Dashboard} restClient={vulcainRestClient(urlMappings)} customSagas={[errorSagas]}>
-      <Resource name="customer" list={CustomerList} edit={CustomerEdit} create={CustomerCreate} icon={PostIcon} remove={Delete} /> 
     </Admin>
 );
 

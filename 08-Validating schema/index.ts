@@ -13,9 +13,9 @@ class Age {
         return null;
     }
 
-    // Optional bind method
+    // Optional coerce method
     // used to convert the input value
-    // bind(val): number { return val;}
+    // coerce(val): number { return val;}
 }
 
 @Model() 
