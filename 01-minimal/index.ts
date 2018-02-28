@@ -14,5 +14,7 @@ class Customer {
 }
 
 // Start service
-let srv = new Application('Sample').enableGraphQL();
+let srv = new Application('Sample')
+    .enableHystrixStream()    
+    .enableGraphQL();
 srv.start(8080);
