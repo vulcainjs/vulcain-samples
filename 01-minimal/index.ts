@@ -1,9 +1,9 @@
 import { Application, Model, Property, QueryHandler, ActionHandler } from 'vulcain-corejs';
 
 // Declare a schema with default handlers for query (Get, All) and actions (create, delete, update)
-@Model()
 @ActionHandler({ scope: '?' })    // Anonymous access
 @QueryHandler({scope: '?'})       // Anonymous access
+@Model()
 class Customer {
     @Property({type:'string', required: true}) 
     firstName: string;

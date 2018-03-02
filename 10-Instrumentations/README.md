@@ -30,7 +30,7 @@ Example in launch.json
     }
 ```
 
-Go to jaeger dashboard on ```localhost:16686```
+Go to jaeger dashboard on ```http://localhost:16686```
 
 ## Using prometheus
 
