@@ -7,8 +7,7 @@
             "name": "01-minimal",
             "env": {
                 "VULCAIN_SERVICE_NAME": "SampleService",
-                "VULCAIN_SERVICE_VERSION": "1.0",
-                "jaeger": "localhost"
+                "VULCAIN_SERVICE_VERSION": "1.0"
             },            
             "program": "${workspaceRoot}/01-minimal/index.ts",
             "cwd":"${workspaceRoot}/01-minimal",
@@ -22,7 +21,9 @@
             "name": "02-Custom Handlers",
             "env": {
                 "VULCAIN_SERVICE_NAME": "SampleService",
-                "VULCAIN_SERVICE_VERSION": "1.0"
+                "VULCAIN_SERVICE_VERSION": "1.0",
+                "mongo": "localhost",
+                "jaeger": "localhost"
             },            
             "program": "${workspaceRoot}/02-Custom Handlers/index.ts",
             "cwd":"${workspaceRoot}/02-Custom Handlers",

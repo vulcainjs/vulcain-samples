@@ -13,9 +13,9 @@ class Age {
         return null;
     }
 
-    // Optional bind method
-    // use to convert the input value
-    // bind(val): number { return val;}
+    // Optional coerce method
+    // used to convert the input value
+    // coerce(val): number { return val;}
 }
 
 @Model() 
@@ -46,7 +46,7 @@ class Customer {
     lastName: string;
 
     // Custom type
-    @Property({type: "Age", required: true}, {min:10})
+    @Property({ type: "Age", required: true, typeProperties: { min: 10 } })
     age: number;
 
     @Property({ type: "uid", isKey: true }) // Create a new unique id if empty

@@ -1,8 +1,8 @@
 # Monitoring
 
-Vulcain generates many metrics. You just set some environment variable when you execute a service to enable metrics for a specific tool.
+Vulcain generates many metrics. You just need to set some environment variables when you execute a service to enable metrics for a specific tool.
 
-> You can use docker-compose to run all server describe in this file. **Update** prometheus/prometheus.yml with your host ip before running docker-compose.
+> You can use docker-compose to run all servers described in this file. **Update** prometheus/prometheus.yml with your host ip before running docker-compose.
 
 ```bash
 docker-compose up -d
@@ -16,9 +16,9 @@ Run jaeger server with
 docker run -d -p 5775:5775/udp -p 6831:6831/udp -p 6832:6832/udp -p 5778:5778 -p 16686:16686 -p 14268:14268 jaegertracing/all-in-one:latest
 ```
 
-> You can also used jaeger as a zipkin server see [here](http://jaeger.readthedocs.io/en/latest/getting_started/)
+> You can also use jaeger as a zipkin server see [here](http://jaeger.readthedocs.io/en/latest/getting_started/)
 
-Start service with one environment variable named ```jaeger```
+Start service with an environment variable named ```jaeger```
 
 Example in launch.json
 

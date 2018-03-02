@@ -13,7 +13,7 @@ export class MyActionHandler extends DefaultActionHandler {
     @Action({description: "Create a customer with random names", name: "random", outputSchema: "Customer"})
     async createRandomCustomer() {
         
-        // The call to this command is guaranteed to get a response in less than 2500ms
+        // The call to this command is guaranteed to get a response in less than 2500ms (as defined in the command's metadata)
         let cmd = CommandFactory.createCommand<GetRandomNameCommand>(this.context, "GetRandomNameCommand");
         let customer = await cmd.run("france");
 
