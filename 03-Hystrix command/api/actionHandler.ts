@@ -14,7 +14,7 @@ export class MyActionHandler extends DefaultActionHandler {
     async createRandomCustomer() {
         
         // The call to this command is guaranteed to get a response in less than 2500ms (as defined in the command's metadata)
-        let cmd = CommandFactory.createCommand<GetRandomNameCommand>(this.context, "GetRandomNameCommand");
+        let cmd = new GetRandomNameCommand(this.context, 1, 2);
         let customer = await cmd.run("france");
 
         return super.create(customer);

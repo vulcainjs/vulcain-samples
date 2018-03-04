@@ -6,3 +6,5 @@ node_modules
 npm_debug.log
 package-lock.json
 05-Calling other services/api/sampleService10.ts
+service.live
+service.ready

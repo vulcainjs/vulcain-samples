@@ -1,4 +1,4 @@
-import { Application, Model, Property, QueryHandler, ActionHandler, Validator, SchemaTypeDefinition, IRequestContext } from 'vulcain-corejs';
+import { Application, Model, Property, QueryHandler, ActionHandler, Validator, SchemaTypeDefinition, IRequestContext, VALIDATORS } from 'vulcain-corejs';
 
 // Define and register a new custom type (or validator)
 @SchemaTypeDefinition()
@@ -38,7 +38,7 @@ class Customer {
 
     // Public (exposed) property must have a Property annotation to be validated and bounded
     @Property({ type: 'string', required: true, description: "First name" }) 
-    @Validator("length", { min: 4 }) // Default validator are "length", "pattern"
+    @Validator(VALIDATORS.Length, { min: 4 }) 
     firstName: string;
 
     @Property({ type: 'string', required: true, description: "Last name" })
