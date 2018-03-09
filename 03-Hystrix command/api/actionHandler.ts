@@ -13,6 +13,7 @@ export class MyActionHandler extends DefaultActionHandler {
     @Action({description: "Create a customer with random names", name: "random", outputSchema: "Customer"})
     async createRandomCustomer() {
         
+        // Proxied hystrix command
         // The call to this command is guaranteed to get a response in less than 2500ms (as defined in the command's metadata)
         let cmd = new GetRandomNameCommand(this.context, 1, 2);
         let customer = await cmd.run("france");
