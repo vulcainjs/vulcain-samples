@@ -9,7 +9,6 @@
   "author": "Alain Metge",
   "license": "MIT",
   "dependencies": {
-    "mysql": "^2.15.0",
     "vulcain-corejs": ">2.0.0-"
   },
   "devDependencies": {

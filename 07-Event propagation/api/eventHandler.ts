@@ -13,8 +13,8 @@ export class MyEventHandler extends AbstractEventHandler{
     })
     @ExposeEvent()    
     // This handler is called every time a customer is created except for the first one (cf filter)
-    onCustomerCreated(customer: Customer) { // Argument is eventData.value
+    async onCustomerCreated(customer: Customer) { // Argument is eventData.value
         // You can access the underlying event with the property this.event
-        console.log(`Customer ${customer.firstName} ${customer.lastName} created.`);
+        this.context.logInfo(() => `Customer ${customer.firstName} ${customer.lastName} created.`);
     }
 }
